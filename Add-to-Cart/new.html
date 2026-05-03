@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calorie & Cost Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/046/624/660/non_2x/colorful-shopping-cart-logo-with-green-yellow-and-red-stripes-free-vector.jpg"
+        alt="Shopping cart"
+        class="logo-ring"
+        width="200"
+        height="200"
+      />
+
+      <h2 class="title">Calorie & Cost Tracker</h2>
+      <p class="subtitle">Track items, calories, and amount in real time</p>
+
+      <div class="top-bar">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌗</button>
+        <div class="counters" aria-live="polite">
+          <span id="total-items" class="chip">Items: 0</span>
+          <span id="total-cal" class="chip">Calories: 0 kcal</span>
+          <span id="total-sum" class="chip">Amount: ₹0</span>
+        </div>
+      </div>
+
+      <div class="inputs two-cols">
+        <input
+          type="text"
+          id="item-name"
+          placeholder="Item (e.g., Egg 20)"
+          aria-label="Item name (optionally with amount)"
+        />
+        <input
+          type="number"
+          id="item-qty"
+          min="1"
+          step="1"
+          value="1"
+          placeholder="Qty"
+          aria-label="Quantity"
+        />
+      </div>
+
+      <button id="add-button" aria-label="Add item">Add</button>
+
+      <!-- Click any row to delete -->
+      <ul id="shopping-list" aria-label="Items list"></ul>
+
+      <!-- Bottom note: Set A (clean & clear) -->
+      <div class="note-box" role="note" aria-label="usage note">
+        <ul>
+          <li>
+            <strong>Add item + quantity → we’ll total the calories.</strong>
+          </li>
+          <li>
+            <strong
+              >Add item + cost (e.g., Egg 20) → we’ll total the amount.</strong
+            >
+          </li>
+          <li>
+            <strong
+              >All calorie values are approximate and calculated per 100 grams
+              of each item.</strong
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="new.js" type="module"></script>
+  </body>
+</html>
